@@ -1,6 +1,8 @@
 {
     "name": "st2f/phpunit",
     "description": "Basic phpunit starter",
+    "description": "Basic phpunit starter",
+    "license": "MIT",
     "require-dev": {
         "phpunit/phpunit": "^10.5"
     },
