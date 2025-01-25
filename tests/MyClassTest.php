@@ -16,4 +16,14 @@ class MyClassTest extends TestCase
 
         $this->assertEquals($expectedResult, $result);
     }
+
+    public function testSomething(): void
+    {
+        $this->assertTrue(true, 'This should work');
+
+        // Stop here and mark this test as incomplete
+        $this->markTestIncomplete(
+            'This test has not been implemented yet',
+        );
+    }
 }
