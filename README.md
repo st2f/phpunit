@@ -1,3 +1,6 @@
+[![PHP Composer & PHPUnit](https://github.com/st2f/phpunit/actions/workflows/php.yml/badge.svg)](https://github.com/st2f/phpunit/actions/workflows/php.yml)
+
+
 # install vendor packages
 
 ```bash
@@ -10,6 +13,8 @@ composer install
 
 ```bash
 ./vendor/bin/phpunit tests
+# or run: composer run-script test
+
 ```
 ![run-phpunit-test](https://github.com/st2f/phpunit/assets/66139812/2fe26a56-8395-40dc-a353-84fdb25fe743)
 
