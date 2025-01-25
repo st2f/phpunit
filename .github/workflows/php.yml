@@ -1,17 +1,18 @@
-name: PHP Composer
+name: PHP Composer & PHPUnit
 
 on:
   push:
     branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
 
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }} 
+  cancel-in-progress: true
+  
 permissions:
   contents: read
 
 jobs:
   build:
-
     runs-on: ubuntu-24.04
 
     steps:
@@ -36,7 +37,5 @@ jobs:
       run: composer -v
 
     # Add a test script to composer.json, for instance: "test": "vendor/bin/phpunit"
-    # Docs: https://getcomposer.org/doc/articles/scripts.md
-
     - name: Run test suite
       run: composer run-script test
